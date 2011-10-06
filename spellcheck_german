@@ -1,0 +1,3 @@
+#!/bin/sh
+
+aspell --add-tex-command "ref p" --add-tex-command "eqref p" --add-tex-command "citet p" --add-tex-command "citep p" -l de_DE -t check $*
