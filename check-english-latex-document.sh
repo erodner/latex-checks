@@ -33,7 +33,8 @@ egrep -n --color "In contrast[^,][^t][^o]" $*
 # no comma after although
 egrep -n --color "Although," $*
 egrep -n --color "In the remaining \w+ of this \w+ " $*
-egrep -n --color "For [^,]+ we " $*
+egrep -n --color "For *[^,]+ *we " $*
+egrep -n --color "Equivalently *[^,]+ *we " $*
 egrep -n --color ", that" $*
 egrep -n --color "In case of [^,]+$" $*
 egrep -n --color "In contrast [^,]+$" $*

@@ -31,6 +31,12 @@ sub countHits
 	return $count;
 }
 
+sub printHits
+{
+  my $word = shift @_;
+	print `egrep --color \'$word\' $literaturedir/*.txt`;
+}
+
 if ( @ARGV == 0 )
 {
 	die ("usage: $0 <words>\n");
@@ -40,16 +46,21 @@ if ( ! -d $literaturedir ) {
 	die ("$0: directory $literaturedir not found!\n");
 }
 
-my $maxc = 0;
-my $maxword = "";
-for my $w ( @ARGV )
+if ( @ARGV == 1 )
 {
-	my $c = countHits ( $w );
-	if ( $c > $maxc ) {
-		$maxc = $c;
-		$maxword = $w;
-	}
-	print "$w: $c\n";
-}
+  printHits( $ARGV[0] );
+} else {
+  my $maxc = 0;
+  my $maxword = "";
+  for my $w ( @ARGV )
+  {
+    my $c = countHits ( $w );
+    if ( $c > $maxc ) {
+      $maxc = $c;
+      $maxword = $w;
+    }
+    print "$w: $c\n";
+  }
 
-print "$maxword\n";
+  print "$maxword\n";
+}
