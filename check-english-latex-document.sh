@@ -37,6 +37,7 @@ egrep -n --color "For *[^,]+ *we " $*
 egrep -n --color "Equivalently *[^,]+ *we " $*
 egrep -n --color ", that" $*
 egrep -n --color "In case of [^,]+$" $*
+egrep -n --color "Recently [^,]+$" $*
 egrep -n --color "In contrast [^,]+$" $*
 egrep -n --color 'In the remainder[^,]+ we' $* 
 egrep -n --color 'As can be seen (by|in)[^,]+$' $* 

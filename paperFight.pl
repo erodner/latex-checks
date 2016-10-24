@@ -7,7 +7,7 @@
 # The following directory should contain some *.txt documents
 # which can be used for statistics. My suggestion is to
 # convert all files of your paper pdf directory to txt files with pdftotext.
-my $literaturedir = "/home/rodner/doc/literature/paper/object_recognition/";
+my $literaturedir = "/home/rodner/old-space/doc/literature/paper/object_recognition/";
 
 
 ####### countHits () // code date : 29.06.11 ######
